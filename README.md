@@ -69,14 +69,14 @@ $ python manage.py migrate
 $ python manage.py createsuperuser
 ```
 
-Start the server
-```bash
-$ python manage.py runserver
-```
-
 Perform tests
 ```bash
 $ python manage.py test
+```
+
+Start the server
+```bash
+$ python manage.py runserver
 ```
 
 ### Create an employee by curl
