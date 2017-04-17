@@ -57,8 +57,9 @@ $ cd luizalabs
 $ virtualenv .venv
 ```
 
-Install all dependencies
+Active virtualenv and install all dependencies
 ```bash
+$ source .venv/bin/activate
 $ pip install -r requirements.txt
 ```
 
@@ -73,9 +74,35 @@ Start the server
 $ python manage.py runserver
 ```
 
-Create some Employees via admin webpage in http://localhost:8000/admin/employee/employee/add/
+### Create an employee by curl
 
-Retrieve the employees from curl
 ```bash
-$ curl -H "Content-Type: application/javascript" http://localhost:8000/employee/
+$ curl -H "Content-Type: application/json" -X POST -d '{"name":"Arnaldo Pereira", "email":"arnaldo@luizalabs.com", "departament": "Architecture"}' http://localhost:8000/employee/
 ```
+
+
+### Update an employee by curl
+
+URL format: http://localhost:8000/employee/id/
+
+```bash
+$ curl -H "Content-Type: application/json" -X PUT -d '{"name":"Arnaldo Pereira", "email":"arnaldo@luizalabs.com", "departament": "Mobile"}' http://localhost:8000/employee/1/
+```
+
+### Delete an employee by curl
+
+URL format: http://localhost:8000/employee/id/
+
+```bash
+$ curl -X DELETE http://localhost:8000/employee/1/
+```
+
+### Retrieve the employees by curl
+
+```bash
+$ curl -H "Content-Type: application/json" http://localhost:8000/employee/
+```
+
+---
+
+Admin page to manage employees: http://localhost:8000/admin/employee/employee/
