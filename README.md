@@ -47,6 +47,7 @@ Response
 
 ---
 
+
 # Usage
 
 Clone the repository and create a virtualenv
@@ -79,6 +80,7 @@ Start the server
 $ python manage.py runserver
 ```
 
+
 ### Create an employee by curl
 
 ```bash
@@ -94,13 +96,15 @@ URL format: http://localhost:8000/employee/id/
 $ curl -H "Content-Type: application/json" -X PUT -d '{"name":"Arnaldo Pereira", "email":"arnaldo@luizalabs.com", "departament": "Mobile"}' http://localhost:8000/employee/1/
 ```
 
-### Delete an employee by curl
+
+### Retrieve an employee by curl
 
 URL format: http://localhost:8000/employee/id/
 
 ```bash
-$ curl -X DELETE http://localhost:8000/employee/1/
+$ curl -H "Content-Type: application/json" http://localhost:8000/employee/1/
 ```
+
 
 ### List employees by curl
 
@@ -112,12 +116,12 @@ $ curl -H "Content-Type: application/json" http://localhost:8000/employee/?page=
 ```
 
 
-### Retrieve an employee by curl
+### Delete an employee by curl
 
 URL format: http://localhost:8000/employee/id/
 
 ```bash
-$ curl -H "Content-Type: application/json" http://localhost:8000/employee/1/
+$ curl -X DELETE http://localhost:8000/employee/1/
 ```
 
 ---
