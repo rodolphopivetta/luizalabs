@@ -52,7 +52,7 @@ Response
 Clone the repository and create a virtualenv
 
 ```bash
-$ git clone git@github.com:rodolphopivetta/luizalabs.git
+$ git clone https://github.com/rodolphopivetta/luizalabs.git
 $ cd luizalabs
 $ virtualenv .venv
 ```
