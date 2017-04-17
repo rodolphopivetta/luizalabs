@@ -9,6 +9,9 @@ from employee.models import Departament, Employee
 
 class EmployeeTestCase(APITestCase):
     def setUp(self):
+        """
+        Create departaments and employees to test
+        """
         architecture = Departament.objects.create(departament='Architecture')
         ecommerce = Departament.objects.create(departament='E-commerce')
         mobile = Departament.objects.create(departament='Mobile')
@@ -28,7 +31,9 @@ class EmployeeTestCase(APITestCase):
             departament=mobile)
 
     def test_employees_exists(self):
-        """Check if employees have been created"""
+        """
+        Check if employees have been created
+        """
         arnaldo = Employee.objects.get(name="Arnaldo Pereira")
         renato = Employee.objects.get(name="Renato Pedigoni")
         thiago = Employee.objects.get(name="Thiago Catoto")
