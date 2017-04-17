@@ -74,6 +74,11 @@ Start the server
 $ python manage.py runserver
 ```
 
+Perform tests
+```bash
+$ python manage.py test
+```
+
 ### Create an employee by curl
 
 ```bash
