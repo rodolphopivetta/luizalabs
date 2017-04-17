@@ -49,7 +49,7 @@ Response
 
 # Usage
 
-Clone the repository and start a virtualenv
+Clone the repository and create a virtualenv
 
 ```bash
 $ git clone git@github.com:rodolphopivetta/luizalabs.git

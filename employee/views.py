@@ -3,7 +3,7 @@ from __future__ import unicode_literals
 
 from rest_framework import viewsets
 
-from employee.models import Departament, Employee
+from employee.models import Employee
 from employee.serializers import EmployeeSerializer
 
 

@@ -14,7 +14,11 @@ class Departament(models.Model):
 class Employee(models.Model):
     name = models.CharField(max_length=256)
     email = models.EmailField()
-    departament = models.ForeignKey(Departament, null=True, on_delete=models.SET_NULL)
+    departament = models.ForeignKey(
+        Departament,
+        null=True,
+        on_delete=models.SET_NULL
+    )
 
     def __str__(self):
         return self.name
