@@ -97,10 +97,22 @@ URL format: http://localhost:8000/employee/id/
 $ curl -X DELETE http://localhost:8000/employee/1/
 ```
 
-### Retrieve the employees by curl
+### List employees by curl
+
+This endpoint is paginated with 10 elements per page, so `?page=2` can be used.
 
 ```bash
 $ curl -H "Content-Type: application/json" http://localhost:8000/employee/
+$ curl -H "Content-Type: application/json" http://localhost:8000/employee/?page=2
+```
+
+
+### Retrieve an employee by curl
+
+URL format: http://localhost:8000/employee/id/
+
+```bash
+$ curl -H "Content-Type: application/json" http://localhost:8000/employee/1/
 ```
 
 ---

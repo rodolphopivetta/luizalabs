@@ -44,6 +44,7 @@ class EmployeeTestCase(APITestCase):
         """
         response = self.client.get('/employee/', format='json')
         self.assertEqual(response.status_code, status.HTTP_200_OK)
+        # employees are sorted by name, so get by list index is not a problem
         self.assertEqual(response.json()[0]['name'], 'Arnaldo Pereira')
         self.assertEqual(response.json()[1]['name'], 'Renato Pedigoni')
         self.assertEqual(response.json()[2]['name'], 'Thiago Catoto')
